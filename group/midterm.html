@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midterm</title>
+    
+</head>
+<style>
+    .logo{
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    .logo img{
+        max-width: 100px;
+        max-height: 300px;
+    }
+    .laksa{
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    .forum1{
+
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    .forum1 p{
+        white-space: nowrap;
+    }
+    .comment{
+        width: 50%;
+        height: 150px;
+        text-align: left;
+        vertical-align: top;
+    }
+    body{
+        background-color: powderblue;
+    }
+    
+
+</style>
+<body>
+    <div class="background">
+    <div class="logo">
+        <img src="logo.png" alt="" >
+    </div>
+   <hr>
+    <div class="laksa">
+        <h1>Please Review Our resturant</h1>
+        <img src="laksa.jpg" alt="">
+    </div>
+    <div class="forum1">
+        <form action="">
+            <p>Name<input type="text" id="Name" alt="Name" placeholder="Name"></p>
+            <br>
+            <p>Your Review</p>
+            <textarea name="" id="" class="comment" placeholder="Comment Here"></textarea>
+            <br>
+            <p>Gender</p>
+            <div>
+            <input type="radio" name="gender" value="male" checked> Male<br>
+            <input type="radio" name="gender" value="female"> Female<br>
+            </div><br>
+            <p>Please click if your overall experience is good <input type="checkbox"></p>
+            <div>
+                <p>Area <select name="" id="">
+                    <option value="">Cyberjaya</option>
+                    <option value="">Kular Lumpur</option>
+                </select></p>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    </div>
+</body>
+</html>

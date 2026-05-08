@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+  href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+  rel="stylesheet"
+/>
+    <link rel="stylesheet" href="style.css">
+    <title>Fashion</title>
+</head>
+<body>
+       <header class="header">
+        <a href="" class="logo">LOGO </a>
+        <ul class="nav-link" id="nav-link">
+            <li><a href="#catalogue">Catalogue</a></li>
+            <li><a href="#fashion">Value Buy</a></li>
+            <li><a href="#product">Product</a></li>
+            <li><a href="#newarrival">New Arrival</a></li>
+            <li><a href="#lifestyle">Lifestyle</a></li>
+            <li><a href="#aboutus">About us</a></li>
+        </ul>
+        <button class="btn">Sign Up</button>
+        </header>
+        <!-- SLIDER-1 -->
+         <section>
+            <div class="section_container">
+            <div class="section_content">
+                <h1>
+                    <span>LET,S</span>
+                    <br />
+                    EXPLORE
+                    <br/>
+                    <span>UNIQUE</span>
+                    <br/>
+                    CLOTHES
+                    
+                </h1>
+                <p>Live for influential and innovation fashion!</p>
+                <div class="section_btn">
+                    <button >Shop Now</button>
+                </div>
+             </div>
+             <div class="section_image">
+                <img src="photo/section-image.png" alt="section">
+          </div>
+            
+            </div>
+         </section>
+         <!--Logo Banner  -->
+         <section class="banner">
+            <div class="banner_container">
+                <img src="photo/Carhartt-Logo-700x394.png" alt="">
+                <img src="photo/gu.png" alt="">
+                <img src="photo/new-balance-2-logo-black-and-white.png" alt="">
+                <img src="photo/onisuka1024x1024.png" alt="">
+
+                <img src="photo/Carhartt-Logo-700x394.png" alt="">
+                <img src="photo/gu.png" alt="">
+                <img src="photo/new-balance-2-logo-black-and-white.png" alt="">
+                <img src="photo/onisuka1024x1024.png" alt="">
+            </div>
+         </section>
+
+         <!--  -->
+         <section class="section_container2 arrival_container" id="newarrival">
+            <h2 class="section_header">NEW ARRIVIAL</h2>
+            <div class="arrival_grid">
+                <div class="arrival_card">
+                <div class="arrival_image">
+                    <img src="photo/hoddie-1.png" alt="">
+                </div>
+                <div class="arrival_content">
+                    <div>
+                        <h4>Hoddie</h4>
+                        <a href="">Explore now</a>
+                    </div>
+                    <span><i class="ri-arrow-right-line"></i></span>
+                </div>
+                </div>
+
+                <div class="arrival_card">
+                <div class="arrival_image">
+                    <img src="photo/hoddie-1.png" alt="">
+                </div>
+                <div class="arrival_content">
+                    <div>
+                        <h4>Hoddie</h4>
+                        <a href="">Explore now</a>
+                    </div>
+                    <span><i class="ri-arrow-right-line"></i></span>
+                </div>
+                </div>
+                 
+            </div>
+
+         </section>
+
+         <!-- Product -->
+<ul class="indicator">
+    <li data-filter="all">  <a href="" id="all">All</a></li>
+    <li data-filter="women"><a href="" id="women">Women</a></li>
+    <li data-filter="men">  <a href="" id="men">Men</a></li>
+    <li data-filter="kid">  <a href="" id="kid">Kid</a></li>
+</ul>
+ 
+<!-- REPLACE your existing .product_field div with just this empty shell -->
+<!-- JS will fill it automatically -->
+<div class="product_field"></div>
+<style>
+/* --- CONTAINER STYLES --- */
+.product-gender { padding: 60px 0; background: #f4f6f6; }
+.choose_section { width: 90%; margin: 0 auto 30px; border-bottom: 2px solid black; display: flex; justify-content: space-between; }
+.indicator { display: flex; gap: 20px; list-style: none; padding-bottom: 10px; }
+.indicator li a { font-weight: 800; color: black; text-decoration: none; font-size: 1.2rem; cursor: pointer; }
+
+/* --- ROW & TRACK STYLES --- */
+.category-row { margin-bottom: 50px; transition: 0.3s ease; }
+.row-title { margin-left: 5%; font-size: 1.8rem; color: #1b1a1a; margin-bottom: 10px; }
+
+.swipe-track {
+    display: flex; /* Keeps items in a single horizontal row */
+    gap: 20px;
+    padding: 20px 5%;
+    overflow-x: auto; /* Enables horizontal swipe per row */
+    scroll-behavior: smooth;
+    scrollbar-width: none; /* Hide scrollbar Firefox */
+    list-style: none;
+}
+.swipe-track::-webkit-scrollbar { display: none; } /* Hide scrollbar Chrome/Safari */
+
+/* --- CARD STYLES --- */
+.p-card {
+    flex: 0 0 280px; /* Card size stays locked so they don't squish */
+    background: #1b1a1a;
+    border-radius: 20px;
+    padding: 15px;
+    color: white;
+    transition: 0.3s;
+}
+
+/* --- TEXT ALIGNMENT FIX --- */
+.p-card picture { width: 100%; height: 200px; background: #eee; border-radius: 10px; display: block; overflow: hidden; }
+.p-card picture img { width: 100%; height: 100%; object-fit: contain; }
+
+.detail { text-align: left; margin-top: 15px; }
+.detail strong { font-size: 1.2rem; display: block; margin-bottom: 5px; }
+.detail span { font-size: 11px; color: #ccc; display: block; margin-bottom: 15px; line-height: 1.4; height: 32px; overflow: hidden; }
+
+/* --- BUTTON & HOVER --- */
+.detail small { 
+    display: inline-block; padding: 8px 20px; background: white; 
+    color: black; border-radius: 5px; font-weight: bold; cursor: pointer; transition: 0.3s;
+}
+.detail small:hover { background: #888681; color: white; transform: scale(1.05); }
+
+/* --- FILTER LOGIC --- */
+.row-hidden { display: none !important; }
+</style>
+
+<script>
+document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.onclick = (e) => {
+        const target = btn.getAttribute('data-target');
+        const rows = document.querySelectorAll('.category-row');
+
+        rows.forEach(row => {
+            const category = row.getAttribute('data-category');
+            
+            // If "all" is selected, show every row. Otherwise, show only the matching row.
+            if (target === 'all' || category === target) {
+                row.classList.remove('row-hidden');
+            } else {
+                row.classList.add('row-hidden');
+            }
+        });
+    };
+});
+</script>
+
+
+
+        <!-- Navigation Arrows -->
+        <div class="slider-nav">
+            <button id="prev"><i class="ri-arrow-left-s-line"></i></button>
+            <button id="next"><i class="ri-arrow-right-s-line"></i></button>
+        </div>
+    </div>  
+</section>
+
+
+
+          <!--Sale  -->
+        <section class="sale" id="sale">
+            <div class="section_container3 sale_container">
+               <div class="slider_container">
+                <div class="slider_track" id="sliderTrack">
+                    <div class="sale_image"><img src="photo/hoddie-1.png" alt=""></div>
+                    <div class="sale_image"><img src="photo/hoddie-2.png" alt=""></div>
+                    <div class="sale_image"><img src="photo/hoddie-3.png" alt=""></div>
+                </div>
+            </div>
+            <div class="sale_content">
+                <h2><span>Payday</span><br>SALE NOW!!</h2>
+                <p>
+                   Spend minimal 150RM get 50% off vocher for the next purchase
+                </p>
+                <h4>1 MAY - 15 MAY 2026</h4> 
+                   <p>*Terms and Conditions apply</p><br>
+                   <button class="btn">Shop Now</button>
+            </div>
+        </div> 
+        </section>
+        <!-- catagories -->
+            <ul class="container">
+                <li>
+                    <img src="" alt="">
+                    <div class="content">
+                    <span>
+                        <h2>Sneaker</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, esse.</p>
+                    </span>
+                    </div>
+                </li>
+                <li>
+                    <img src="" alt="">
+                    <div class="content">
+                    <span>
+                        <h2>Jacket</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, esse.</p>
+                    </span>
+                    </div>
+                </li>
+                <li>
+                    <img src="" alt="">
+                    <div class="content">
+                    <span>
+                        <h2>Outerwear</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, esse.</p>
+                    </span>
+                    </div>
+                </li>
+                <li>
+                    <img src="" alt="">
+                    <div class="content">
+                    <span>
+                        <h2>Baggy jean</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, esse.</p>
+                    </span>
+                    </div>
+                </li>
+                <li>
+                    <img src="" alt="">
+                    <div class="content">
+                    <span>
+                        <h2>Sneaker</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, esse.</p>
+                    </span>
+                    </div>
+                </li>
+                <li>
+                    <img src="" alt="">
+                    <div class="content">
+                    <span>
+                        <h2>Jacket</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, esse.</p>
+                    </span>
+                    </div>
+                </li>
+                <li>
+                    <img src="" alt="">
+                    <div class="content">
+                    <span>
+                        <h2>Outerwear</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, esse.</p>
+                    </span>
+                    </div>
+                </li>
+                <li>
+                    <img src="" alt="">
+                    <div class="content">
+                    <span>
+                        <h2>Baggy jean</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, esse.</p>
+                    </span>
+                    </div>
+                </li>
+            </ul>
+       
+         <!-- ABOUT US -->
+<section class="about_us_section" id="aboutus">
+    <div class="about_us_container">
+        <div class="slide">
+            <div class="about-item" style="background-image: url(photo/hoddie-1.png);">
+                <div class="content">
+                    <div class="name">STREETWEAR</div>
+                    <div class="des">Premium Quality Hoodies</div>
+                    <button class="about_us_content">See more</button>
+                </div>
+            </div>
+            <div class="about-item" style="background-image: url(photo/hoddie-2.png);">
+                <div class="content">
+                    <div class="name">URBAN STYLE</div>
+                    <div class="des">New Winter Collection</div>
+                    <button class="about_us_content">See more</button>
+                </div>
+            </div>
+            <div class="about-item" style="background-image: url(photo/hoddie-1.png);">
+                <div class="content">
+                    <div class="name">LIFESTYLE</div>
+                    <div class="des">Explore Style</div>
+                    <button class="about_us_content">See more</button>
+                </div>
+            </div>
+            <div class="about-item" style="background-image: url(photo/hoddie-2.png);">
+                <div class="content">
+                    <div class="name">TRENDING</div>
+                    <div class="des">Best Sellers</div>
+                    <button class="about_us_content">See more</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Arrows Container -->
+        <div class="button">
+            <button class="prev"><i class="ri-arrow-left-s-line"></i></button>
+            <button class="next"><i class="ri-arrow-right-s-line"></i></button>
+        </div>
+    </div>
+</section>
+  
+         <script src="https://unpkg.com/scrollreveal"></script>
+         <script src="script.js"></script>
+</body>
+</html>
