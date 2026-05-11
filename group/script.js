@@ -197,4 +197,55 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+// Sing up /Log in
+const authOverlay  = document.getElementById('authOverlay');
+const authClose    = document.getElementById('authClose');
+const signupForm   = document.getElementById('signupForm');
+const loginForm    = document.getElementById('loginForm');
+const tabSignup    = document.getElementById('tabSignup');
+const tabLogin     = document.getElementById('tabLogin');
+const signupBtn    = document.querySelector('.header .btn');
+
+function openModal(showTab) {
+    authOverlay.classList.add('active');
+    document.body.classList.add('modal_open');
+    switchTab(showTab || 'signup');
+}
+
+function closeModal() {
+    authOverlay.classList.remove('active');
+    document.body.classList.remove('modal_open');
+}
+
+function switchTab(tab) {
+    if (tab === 'signup') {
+        signupForm.classList.remove('hidden');
+        loginForm.classList.add('hidden');
+        tabSignup.classList.add('active');
+        tabLogin.classList.remove('active');
+    } else {
+        loginForm.classList.remove('hidden');
+        signupForm.classList.add('hidden');
+        tabLogin.classList.add('active');
+        tabSignup.classList.remove('active');
+    }
+}
+
+// Open  Sign Up button
+if (signupBtn) signupBtn.addEventListener('click', () => openModal('signup'));
+
+// Tab clicks
+tabSignup.addEventListener('click', () => switchTab('signup'));
+tabLogin.addEventListener('click',  () => switchTab('login'));
+
+// In-form switch links
+document.getElementById('switchToLogin').addEventListener('click',  () => switchTab('login'));
+document.getElementById('switchToSignup').addEventListener('click', () => switchTab('signup'));
+
+// Close button & overlay click
+authClose.addEventListener('click', closeModal);
+authOverlay.addEventListener('click', (e) => { if (e.target === authOverlay) closeModal(); });
+
+// Escape key
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
 
