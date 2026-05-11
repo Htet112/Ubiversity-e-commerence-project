@@ -23,7 +23,7 @@
         </ul>
         <button class="btn">Sign Up</button>
         </header>
-        <!-- SLIDER-1 -->
+        <!-- Slider -->
          <section>
             <div class="section_container" id="catalogue">
             <div class="section_content">
@@ -39,7 +39,7 @@
                 </h1>
                 <p>Live for influential and innovation fashion!</p>
                 <div class="section_btn">
-                    <button >Shop Now</button>
+                    <button ><a href="" id="#product"></a>Shop Now</button>
                 </div>
              </div>
              <div class="section_image">
@@ -711,12 +711,81 @@
             <ul>
                 <li><a href="#aboutus">About Us</a></li>
                 <li>Contact: support@brand.com</li>
-                <li>Visit: 123 Street, City</li>
+                <li>IOI Mall Punchong,L4</li>
             </ul>
             
         </div>
     </div>
 </footer>
+
+ <!-- Sgin up/Log IN -->
+         <div class="auth_overlay" id="authOverlay">
+            <div class="auth_modal" id="authModal">
+                <button class="auth_close" id="authClose"><i class="ri-close-line"></i></button>
+
+                <!-- Tab Switcher -->
+                <div class="auth_tabs">
+                    <button class="auth_tab active" id="tabSignup">Sign Up</button>
+                    <button class="auth_tab" id="tabLogin">Log In</button>
+                </div>
+
+                <!-- Sign Up Form -->
+                <div class="auth_form" id="signupForm">
+                    <h2>Create Account</h2>
+                    <div class="input_group">
+                        <i class="ri-user-line"></i>
+                        <input type="text" placeholder="Full Name" required>
+                    </div>
+                    <div class="input_group">
+                        <i class="ri-mail-line"></i>
+                        <input type="email" placeholder="Email Address" required>
+                    </div>
+                    <div class="input_row">
+                        <div class="input_group">
+                            <i class="ri-phone-line"></i>
+                            <input type="tel" placeholder="Phone Number">
+                        </div>
+                        <div class="input_group">
+                            <i class="ri-cake-line"></i>
+                            <input type="number" placeholder="Age" min="1" max="120">
+                        </div>
+                    </div>
+                    <div class="input_group">
+                        <i class="ri-flag-line"></i>
+                        <input type="text" placeholder="Nationality">
+                    </div>
+                    <div class="input_group">
+                        <i class="ri-lock-line"></i>
+                        <input type="password" placeholder="Password" id="signupPassword">
+                    </div>
+                    <div class="input_group">
+                        <i class="ri-lock-2-line"></i>
+                        <input type="password" placeholder="Confirm Password" id="confirmPassword">
+                    </div>
+                    <button class="auth_submit">Sign Up</button>
+                    <p class="auth_switch">Already have an account? <span id="switchToLogin">Log In</span></p>
+                </div>
+
+                <!-- Login Form -->
+                <div class="auth_form hidden" id="loginForm">
+                    <h2>Welcome Back</h2>
+                    <div class="input_group">
+                        <i class="ri-mail-line"></i>
+                        <input type="email" placeholder="Email Address" required>
+                    </div>
+                    <div class="input_group">
+                        <i class="ri-lock-line"></i>
+                        <input type="password" placeholder="Password" required>
+                    </div>
+                    <div class="auth_options">
+                        <label><input type="checkbox"> Remember me</label>
+                        <a href="#">Forgot password?</a>
+                    </div>
+                    <button class="auth_submit">Log In</button>
+                    <p class="auth_switch">Don't have an account? <span id="switchToSignup">Sign Up</span></p>
+                </div>
+            </div>
+         </div>
   
          <script src="https://unpkg.com/scrollreveal"></script>
          <script src="script.js"></script>
